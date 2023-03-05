@@ -7,6 +7,8 @@ export default function Career() {
     <div>
       <h1>This is Career page</h1>
       <Link to="/">Home</Link>
+      <br/>
+      <br/>
       <Link to="/About">About</Link>
     </div>
   );

@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import './style.css';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Home from "./Home"
+import Career from "./Career"
+import About from "./About"
 
 
 let usernamepass_details=[
@@ -30,6 +32,7 @@ export default function App() {
   function Loginpage(){
     return (
       <div>
+        <h1>Log into Just_IN</h1>
       <br />
       <input type="text" placeholder="Username" id="usernameinp" />
       <br />
@@ -37,7 +40,7 @@ export default function App() {
       <input type="password" placeholder="Password" id="passwordinp" />
       <br />
       <br />
-      <button onClick={checking}>login</button>
+      <button onClick={Checking}>login</button>
       <br />
       <br/>
       <div id="failedlog"> </div>
@@ -50,14 +53,18 @@ export default function App() {
 
     return(
       <div>
-        <Home/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Career" element={<Career />} />
+        <Route path="/About" element={<About />} />
+      </Routes>
       </div>
     )
 
 
   }
 
-  function checking(){
+  function Checking(){
     let uninp = document.getElementById('usernameinp').value
     let passinp = document.getElementById('passwordinp').value
   
@@ -68,7 +75,9 @@ export default function App() {
       
       if(usernamepass_details[tempind]['username']===uninp && usernamepass_details[tempind]['password']===passinp)
       {
+        // alert("You are logged in")
         setIsLogin(true);
+        
       }
       else
       {
