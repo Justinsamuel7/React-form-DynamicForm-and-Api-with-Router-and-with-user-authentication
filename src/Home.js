@@ -23,8 +23,6 @@ export default function Home() {
         <li><Link to="/">Log out</Link></li>
       </ul>
 
-
-
       
     </div>
   );

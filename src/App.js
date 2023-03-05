@@ -39,6 +39,7 @@ export default function App() {
       <br />
       <button onClick={checking}>login</button>
       <br />
+      <br/>
       <div id="failedlog"> </div>
       </div>
     );
@@ -71,12 +72,12 @@ export default function App() {
       }
       else
       {
-        document.getElementById('failedlog').innerHTML=`<span>invalid password</span>`
+        document.getElementById('failedlog').innerHTML=`<span>invalid password!</span>`
       }
       
     }
     else{
-      document.getElementById('failedlog').innerHTML=`<span>invalid username</span>`
+      document.getElementById('failedlog').innerHTML=`<span>invalid username!</span>`
     }
   }
   
