@@ -4,6 +4,8 @@ import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Home from "./Home"
 import Career from "./Career"
 import About from "./About"
+import Form from "./Form"
+
 
 
 let usernamepass_details=[
@@ -31,9 +33,10 @@ export default function App() {
 
   function Loginpage(){
     return (
-      <div>
+      <div id="loginbox">
         <h1>Log into Just_IN</h1>
       <br />
+      <div>
       <input type="text" placeholder="Username" id="usernameinp" />
       <br />
       <br />
@@ -45,6 +48,7 @@ export default function App() {
       <br/>
       <div id="failedlog"> </div>
       </div>
+      </div>
     );
   
   }
@@ -55,8 +59,11 @@ export default function App() {
       <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Form" element={<Form />} />
         <Route path="/Career" element={<Career />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Sign in" element={<App />} />
+
       </Routes>
       </div>
     )
@@ -76,6 +83,7 @@ export default function App() {
       if(usernamepass_details[tempind]['username']===uninp && usernamepass_details[tempind]['password']===passinp)
       {
         // alert("You are logged in")
+        // localStorage.setItem('Login', true);
         setIsLogin(true);
         
       }
@@ -95,7 +103,10 @@ export default function App() {
 
   return (
 
-   <> {isLogin ? Homepage() : Loginpage()}</>  
+   <> 
+   {isLogin ? Homepage() : Loginpage()}
+   {/* {Homepage()} */}
+   </>  
    );
 
 }

@@ -10,9 +10,10 @@ export default function Home() {
       <h1>Successfully Logged in,This is home page</h1>
 
       <ul>
+        <li><Link to="/Form">Survey form</Link></li>
         <li><Link to="/Career">Career</Link></li>
         <li><Link to="/About">About</Link></li>
-        <li><Link to="/">Log out</Link></li> 
+        <li><Link to="/Sign in">Log out</Link></li> 
         {/* Logout path is wrong , need to modify */}
       </ul>
 
