@@ -2,7 +2,13 @@ import React from 'react';
 import './style.css';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 
+// function logout()
+// {
+//   // setIsLogin(false);
+//   // navigate('/Sign in');
+//   localStorage.clear();
 
+// }
 
 export default function Home() {
   return (
@@ -14,7 +20,7 @@ export default function Home() {
         <li><Link to="/Career">Career</Link></li>
         <li><Link to="/About">About</Link></li>
         <li><Link to="/Sign in">Log out</Link></li> 
-        {/* Logout path is wrong , need to modify */}
+        {/* <li><Link to="/Sign in" onClick={logout}>Log out</Link></li>  */}
       </ul>
 
       
