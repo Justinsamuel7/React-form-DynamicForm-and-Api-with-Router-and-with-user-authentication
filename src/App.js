@@ -1,11 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Home from './Home';
 import Career from './Career';
 import About from './About';
 import Form from './Form';
-
 
 let usernamepass_details = [
   {
@@ -25,12 +24,11 @@ let usernamepass_details = [
 export default function App() {
   let [isLogin, setIsLogin] = useState(false);
 
-  useEffect(()=>{
-  if(localStorage.getItem('Login'))
-  {
-    setIsLogin(true)
-  }
-  },[])
+  useEffect(() => {
+    if (localStorage.getItem('Login')) {
+      setIsLogin(true);
+    }
+  }, []);
 
   function Loginpage() {
     return (
