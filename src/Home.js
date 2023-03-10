@@ -3,12 +3,11 @@ import './style.css';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import App from "./App"
 
-// function logout()
-// {
-//   localStorage.clear();
-//   App()
+function logout()
+{
+  localStorage.clear();
 
-// }
+}
 
 export default function Home() {
   return (
@@ -19,9 +18,8 @@ export default function Home() {
         <li><Link to="/Form">Survey form</Link></li>
         <li><Link to="/Career">Career</Link></li>
         <li><Link to="/About">About</Link></li>
-        <li><Link to="/Sign in">Log out</Link></li> 
+        <li><Link to="/Sign in" onClick={logout}>Log out</Link></li> 
         {/* <li><Link onClick={logout}>Log out</Link></li>  */}
-        {/* <li><Link to="/Sign in" onClick={logout}>Log out</Link></li>  */}
       </ul>
       
     </div>
