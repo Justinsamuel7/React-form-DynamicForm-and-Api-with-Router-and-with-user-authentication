@@ -29,6 +29,7 @@ export default function Form() {
   {
     e.preventDefault();
     setDetailsArr([...DetailsArr , {...FormTemplate , uniqueKey: new Date().getMilliseconds()}])
+    // ErrorCheck()
     setFormTemplate(({
       name: '',
       age: '',
@@ -37,19 +38,27 @@ export default function Form() {
       mail: '',
       dept: ''
     }))
-    ErrorCheck()
 
   }
 
-  function ErrorCheck()
-  {
-
-    
-    let Errormsg = "Error has occured, Fill all the required values"
+  // function ErrorCheck()
+  // {
 
 
+  //   DetailsArr.map((ele)=>{
 
-  }
+  //     if(ele.name=='' ||  ){
+
+  //       setErrorOccured(true)
+  //     }
+  //     else
+  //     {
+  //       setErrorOccured(false)
+  //     }
+  //   })
+
+
+  // }
 
   return (
     <div>
@@ -79,9 +88,10 @@ export default function Form() {
       <br/>
       <br/>
       <button type="submit">Submit</button>
+      
       <br/>
       <br/>
-      {ErrorOccured ? (<></>): (<>{DetailsArr.map((data)=>{
+      {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data)=>{
         return(
           <ul key={data.uniqueKey}>
           <li>{data.name}</li>
