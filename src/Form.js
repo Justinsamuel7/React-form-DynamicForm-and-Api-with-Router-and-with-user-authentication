@@ -88,7 +88,7 @@ export default function Form() {
       <br/>
       <br/>
       <button type="submit">Submit</button>
-      
+
       <br/>
       <br/>
       {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data)=>{
