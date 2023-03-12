@@ -15,6 +15,7 @@ export default function Form() {
   });
 
   let [DetailsArr, setDetailsArr] = useState([])
+  
 
   function CollectInputs(e)
   {
@@ -26,7 +27,24 @@ export default function Form() {
   function submit(e)
   {
     e.preventDefault();
-    setDetailsArr([...DetailsArr , {FormTemplate}])
+    setDetailsArr([...DetailsArr , {...FormTemplate , uniqueKey: new Date().getMilliseconds()}])
+    setFormTemplate(({
+      name: '',
+      age: '',
+      gender: '',
+      phnumber: '',
+      mail: '',
+      dept: ''
+    }))
+    ErrorCheck()
+
+  }
+
+  function ErrorCheck()
+  {
+
+    let Errormsg = "Error has occured, Fill all the required values"
+
 
 
   }
@@ -63,7 +81,7 @@ export default function Form() {
       <br/>
       {DetailsArr.map((data)=>{
         return(
-          <ul>
+          <ul key={data.uniqueKey}>
           <li>{data.name}</li>
           <li>{data.age}</li>
           <li>{data.gender}</li>
