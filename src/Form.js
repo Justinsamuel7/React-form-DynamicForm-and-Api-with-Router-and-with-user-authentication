@@ -15,7 +15,8 @@ export default function Form() {
   });
 
   let [DetailsArr, setDetailsArr] = useState([])
-  
+  let [ErrorOccured, setErrorOccured] = useState(false)
+
 
   function CollectInputs(e)
   {
@@ -43,6 +44,7 @@ export default function Form() {
   function ErrorCheck()
   {
 
+    
     let Errormsg = "Error has occured, Fill all the required values"
 
 
@@ -79,7 +81,7 @@ export default function Form() {
       <button type="submit">Submit</button>
       <br/>
       <br/>
-      {DetailsArr.map((data)=>{
+      {ErrorOccured ? (<></>): (<>{DetailsArr.map((data)=>{
         return(
           <ul key={data.uniqueKey}>
           <li>{data.name}</li>
@@ -90,7 +92,8 @@ export default function Form() {
           <li>{data.dept}</li>
           </ul>
         )
-      })}
+      })}</>)}
+
       <br/>
       <br/>
 
