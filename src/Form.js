@@ -1,5 +1,6 @@
-import React from 'react';
+import React , {useState}from 'react';
 import './style.css';
+
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 
 export default function Form() {
@@ -13,10 +14,21 @@ export default function Form() {
     dept: ''
   });
 
+  let [DetailsArr, setDetailsArr] = useState([])
 
-  function submit()
+  function CollectInputs(e)
   {
-    alert(234567)
+    // console.log(e.target.value)
+    let key=e.target.name
+    setFormTemplate({...FormTemplate,[key]:e.target.value})
+  }
+
+  function submit(e)
+  {
+    e.preventDefault();
+    setDetailsArr([...DetailsArr , {FormTemplate}])
+
+
   }
 
   return (
@@ -28,25 +40,41 @@ export default function Form() {
       <br/>
       <h2>Form Page</h2>
       <form action="" onSubmit={submit}>
-      <input type="text" name="name" placeholder="Name"/>
+      <input type="text" name="name" placeholder="Name" value={FormTemplate.name} onChange={CollectInputs}/>
       <br/>
       <br/>
-      <input type="number" name="age" placeholder="Age"/>
+      <input type="number" name="age" placeholder="Age" value={FormTemplate.age} onChange={CollectInputs}/>
       <br/>
       <br/>
-      <input type="text" name="gender" placeholder="Gender"/>
+      <input type="text" name="gender" placeholder="Gender" value={FormTemplate.gender} onChange={CollectInputs}/>
       <br/>
       <br/>
-      <input type="text" name="phnumber" placeholder="Contact Number"/>
+      <input type="text" name="phnumber" placeholder="Contact Number" value={FormTemplate.phnumber} onChange={CollectInputs}/>
       <br/>
       <br/>
-      <input type="mail" name="mail" placeholder="Mail ID"/>
+      <input type="mail" name="mail" placeholder="Mail ID" value={FormTemplate.mail} onChange={CollectInputs}/>
       <br/>
       <br/>
-      <input type="text" name="dept" placeholder="Department"/>
+      <input type="text" name="dept" placeholder="Department" value={FormTemplate.dept} onChange={CollectInputs}/>
       <br/>
       <br/>
       <button type="submit">Submit</button>
+      <br/>
+      <br/>
+      {DetailsArr.map((data)=>{
+        return(
+          <ul>
+          <li>{data.name}</li>
+          <li>{data.age}</li>
+          <li>{data.gender}</li>
+          <li>{data.phnumber}</li>
+          <li>{data.mail}</li>
+          <li>{data.dept}</li>
+          </ul>
+        )
+      })}
+      <br/>
+      <br/>
 
 
 
