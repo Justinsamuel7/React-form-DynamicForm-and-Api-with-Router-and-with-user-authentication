@@ -16,6 +16,7 @@ export default function Home() {
 
       <ul>
         <li><Link to="/Form">Survey form</Link></li>
+        <li><Link to="/DynamicForms">Dynamic forms</Link></li>
         <li><Link to="/Career">Career</Link></li>
         <li><Link to="/About">About</Link></li>
         <li><Link to="/Sign in" onClick={logout}>Log out</Link></li> 

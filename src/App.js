@@ -5,6 +5,7 @@ import Home from './Home';
 import Career from './Career';
 import About from './About';
 import Form from './Form';
+import DynamicForms from "./DynamicForm"
 
 let usernamepass_details = [
   {
@@ -57,6 +58,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Form" element={<Form />} />
+          <Route path="/DynamicForms" element={<DynamicForms />} />
           <Route path="/Career" element={<Career />} />
           <Route path="/About" element={<About />} />
           <Route path="/Sign in" element={<App />} />
