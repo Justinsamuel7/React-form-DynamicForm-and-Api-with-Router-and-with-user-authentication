@@ -39,5 +39,38 @@ p {
 
 }
 
+.userdetailscard{
+  padding: 2rem;
+  background-color: rgba(0, 110, 110, 0.534);
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 1px 1px 2px black;
+}
+.formcontainer input{
+  width: 15rem;
+  height: 1.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+}
+.formcontainer input:focus{
+  background-color: rgb(91, 91, 91);
+}
+.formcontainer button{
+  width: 5rem;
+  padding: 0.2rem;
+  background-color: rgb(49, 228, 255);
+  border: 1px solid rgb(0, 162, 186);
+  border-radius: 5px;
+  color: rgb(0, 89, 103);
+  
+}
+.formcontainer button:focus,.formcontainer button:hover{
+  background-color: rgb(40, 184, 206);
+  border: 2px solid rgb(0, 126, 146);
+  transform: scale(1.06);
+  transition-duration: 0.3s;
+}
+
 
 

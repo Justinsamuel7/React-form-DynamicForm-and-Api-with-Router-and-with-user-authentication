@@ -61,14 +61,14 @@ export default function Form() {
   // }
 
   return (
-    <div>
+    <div class="formcomponentall">
       <br/>
       <br/>
       <Link to="/">Home</Link>
       <br/>
       <br/>
       <h2>Form Page</h2>
-      <form action="" onSubmit={submit}>
+      <form action="" onSubmit={submit} class="formcontainer">
       <input type="text" name="name" placeholder="Name" value={FormTemplate.name} onChange={CollectInputs}/>
       <br/>
       <br/>
@@ -93,7 +93,7 @@ export default function Form() {
       <br/>
       {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data)=>{
         return(
-          <ul key={data.uniqueKey}>
+          <ul key={data.uniqueKey} class="userdetailscard">
           <li>{data.name}</li>
           <li>{data.age}</li>
           <li>{data.gender}</li>
