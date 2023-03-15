@@ -11,6 +11,7 @@ export default function DynamicForms() {
       lname : ''
     },
   ])
+
   
 
   function collectData(index,event)
