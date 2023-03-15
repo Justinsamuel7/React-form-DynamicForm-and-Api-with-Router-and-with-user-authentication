@@ -11,6 +11,7 @@ export default function DynamicForms() {
       lname : ''
     },
   ])
+  
 
   function collectData(index,event)
   {
@@ -73,7 +74,15 @@ export default function DynamicForms() {
       })}
       <button type="submit"></button>
       </form> 
-      
+      {}
+      {Dy_Form.map((ele,index)=>{
+        return(
+          <div key={index}>
+            <p>{ele.fname}</p>
+            <p>{ele.lname}</p>
+          </div>
+        )
+      })}
     </div>
   );
 }
