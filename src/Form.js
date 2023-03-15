@@ -94,12 +94,12 @@ export default function Form() {
       {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data)=>{
         return(
           <ul key={data.uniqueKey} class="userdetailscard">
-          <li>{data.name}</li>
-          <li>{data.age}</li>
-          <li>{data.gender}</li>
-          <li>{data.phnumber}</li>
-          <li>{data.mail}</li>
-          <li>{data.dept}</li>
+          <li><b>Name :</b>  {data.name}</li>
+          <li><b>Age :</b>  {data.age}</li>
+          <li><b>Gender :</b>  {data.gender}</li>
+          <li><b>Contact No :</b>  {data.phnumber}</li>
+          <li><b>Mail ID :</b>  {data.mail}</li>
+          <li><b>Department :</b>  {data.dept}</li>
           </ul>
         )
       })}</>)}
