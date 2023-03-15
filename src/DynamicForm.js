@@ -12,6 +12,14 @@ export default function DynamicForms() {
     },
   ])
 
+  function collectData(index,event)
+  {
+    let TempAllValues = [...Dy_Form]
+    TempAllValues[index][event.target.name]=event.target.value
+    setDy_Form(TempAllValues)
+
+  }
+
   function handleSubmit(e)
   {
     e.preventDefault();
@@ -45,8 +53,8 @@ export default function DynamicForms() {
       {Dy_Form.map((ele,index)=>{
         return(
           <div key={index}>
-            <input type="text" name="fname" value={ele.fname} placeholder="First name" />
-            <input type="text" name="lname" value={ele.lname} placeholder="First name"/>
+            <input type="text" name="fname" value={ele.fname} placeholder="First name" onChange={(event)=>collectData(index,event)}/>
+            <input type="text" name="lname" value={ele.lname} placeholder="First name" onChange={(event)=>collectData(index,event)}/>
                 {index === Dy_Form.length - 1 ? (
                   <button onClick={addElement}>Add</button>
                 ) : (
@@ -65,6 +73,7 @@ export default function DynamicForms() {
       })}
       <button type="submit"></button>
       </form> 
+      
     </div>
   );
 }
