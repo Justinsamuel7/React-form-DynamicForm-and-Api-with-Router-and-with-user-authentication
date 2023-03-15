@@ -66,7 +66,7 @@ export default function DynamicForms() {
                   ''
                 )}
                 {index > 0 ? (
-                  <button onClick={() => removeElement(index)}>Remove</button>
+                  <button onClick={() => removeElement(index)} id="removebtn">Remove</button>
                 ) : (
                   ''
                 )}

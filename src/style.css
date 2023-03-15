@@ -4,10 +4,10 @@ p {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#failedlog{
+#failedlog {
   color: red;
 }
-#loginbox{
+#loginbox {
   height: 15rem;
   margin-top: 5rem;
   padding: 3rem;
@@ -15,18 +15,18 @@ p {
   border-radius: 1rem;
   box-shadow: 1px 1px 2px black;
 }
-#loginbox h1{
+#loginbox h1 {
   color: rgb(0, 161, 224);
-  cursor:default;
+  cursor: default;
   text-decoration: underline;
 }
-#loginbox input{
+#loginbox input {
   height: 1.5rem;
   width: 12rem;
   border: 1px solid rgb(0, 161, 224);
   border-radius: 0.5rem;
 }
-#loginbox button{
+#loginbox button {
   height: 1.5rem;
   width: 5rem;
   background-color: aqua;
@@ -34,58 +34,55 @@ p {
   border-radius: 0.5rem;
   cursor: pointer;
 }
-#loginbox button:hover{
+#loginbox button:hover {
   background-color: rgb(0, 202, 202);
-
 }
 
-.userdetailscard{
+.userdetailscard {
   padding: 2rem;
   background-color: rgba(0, 110, 110, 0.534);
   border-radius: 1rem;
   color: white;
   box-shadow: 1px 1px 2px black;
 }
-.formcontainer input{
+.formcontainer input {
   width: 15rem;
   height: 1.5rem;
   background-color: black;
   color: white;
   border-radius: 0.5rem;
 }
-.formcontainer input:focus{
+.formcontainer input:focus {
   background-color: rgb(91, 91, 91);
 }
-.formcontainer button{
+.formcontainer button {
   width: 5rem;
   padding: 0.2rem;
   background-color: rgb(49, 228, 255);
   border: 1px solid rgb(0, 162, 186);
   border-radius: 5px;
   color: rgb(0, 89, 103);
-  
 }
-.formcontainer button:focus,.formcontainer button:hover{
+.formcontainer button:focus,
+.formcontainer button:hover {
   background-color: rgb(40, 184, 206);
   border: 2px solid rgb(0, 126, 146);
   transform: scale(1.06);
   transition-duration: 0.3s;
 }
 
-.Dynamicformcont input,button
-{
+.Dynamicformcont input,
+button {
   margin: 0.5rem;
 }
-.Dynamicformcont input
-{
+.Dynamicformcont input {
   width: 15rem;
   height: 1.5rem;
   background-color: black;
   color: white;
   border-radius: 0.5rem;
 }
-.Dynamicformcont button
-{
+.Dynamicformcont button {
   width: 5rem;
   padding: 0.2rem;
   background-color: rgb(49, 228, 255);
@@ -93,20 +90,25 @@ p {
   border-radius: 5px;
   color: rgb(0, 89, 103);
 }
-.Dynamicformcont button:focus,.Dynamicformcont button:hover{
+.Dynamicformcont button:focus,
+.Dynamicformcont button:hover {
   background-color: rgb(40, 184, 206);
   border: 2px solid rgb(0, 126, 146);
   transform: scale(1.06);
   transition-duration: 0.3s;
 }
-.Dynamicformcont h2
-{
+.Dynamicformcont h2 {
   color: rgb(0, 89, 103);
 }
-.Dynamicformcont li
-{
+.Dynamicformcont li {
   color: rgb(40, 184, 206);
 }
-
-
-
+#removebtn {
+  background-color: rgb(255, 49, 49);
+  color: rgb(103, 0, 0);
+  border: 1px solid rgb(186, 0, 0);
+}
+#removebtn:hover {
+  background-color: rgb(206, 40, 40);
+  border: 2px solid rgb(146, 0, 0);
+}
