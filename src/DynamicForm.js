@@ -12,10 +12,11 @@ export default function DynamicForms() {
     },
   ])
 
-  function handleSubmit()
+  function handleSubmit(e)
   {
-
+    e.preventDefault();
   }
+
   function addElement()
   {
     setDy_Form([...Dy_Form ,{fname : '',lname : ''}])
@@ -44,7 +45,7 @@ export default function DynamicForms() {
       {Dy_Form.map((ele,index)=>{
         return(
           <div key={index}>
-            <input type="text" name="fname" value={ele.fname} placeholder="First name"/>
+            <input type="text" name="fname" value={ele.fname} placeholder="First name" />
             <input type="text" name="lname" value={ele.lname} placeholder="First name"/>
                 {index === Dy_Form.length - 1 ? (
                   <button onClick={addElement}>Add</button>
@@ -56,11 +57,13 @@ export default function DynamicForms() {
                 ) : (
                   ''
                 )}
+                <br/>
+                <br/>
                 
           </div>
         )
       })}
-
+      <button type="submit"></button>
       </form> 
     </div>
   );
