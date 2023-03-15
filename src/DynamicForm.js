@@ -12,6 +12,8 @@ export default function DynamicForms() {
     },
   ])
 
+  let [ShowData , setShowData] = useState("hide")
+
   
 
   function collectData(index,event)
@@ -25,6 +27,7 @@ export default function DynamicForms() {
   function handleSubmit(e)
   {
     e.preventDefault();
+    setShowData("show")
   }
 
   function addElement()
@@ -43,7 +46,7 @@ export default function DynamicForms() {
 
 
   return (
-    <div>
+    <div class="Dynamicformcont">
       <br/>
       <br/>
       <h1>Dynamic Forms</h1>
@@ -56,7 +59,7 @@ export default function DynamicForms() {
         return(
           <div key={index}>
             <input type="text" name="fname" value={ele.fname} placeholder="First name" onChange={(event)=>collectData(index,event)}/>
-            <input type="text" name="lname" value={ele.lname} placeholder="First name" onChange={(event)=>collectData(index,event)}/>
+            <input type="text" name="lname" value={ele.lname} placeholder="Last name" onChange={(event)=>collectData(index,event)}/>
                 {index === Dy_Form.length - 1 ? (
                   <button onClick={addElement}>Add</button>
                 ) : (
@@ -73,17 +76,20 @@ export default function DynamicForms() {
           </div>
         )
       })}
-      <button type="submit"></button>
+      <button type="submit">Submit</button>
       </form> 
-      {}
-      {Dy_Form.map((ele,index)=>{
+      <br/>
+      {ShowData=="show" ? (<>
+        <h2>Names</h2>
+        {Dy_Form.map((ele,index)=>{
         return(
-          <div key={index}>
-            <p>{ele.fname}</p>
-            <p>{ele.lname}</p>
-          </div>
+          <li key={index}>
+            <span>{ele.fname} </span>
+            <span>{ele.lname}</span>
+          </li>
         )
       })}
+      </>) : ''}
     </div>
   );
 }
