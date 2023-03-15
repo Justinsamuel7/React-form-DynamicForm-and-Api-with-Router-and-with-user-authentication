@@ -16,8 +16,20 @@ export default function DynamicForms() {
   {
 
   }
+  function addElement()
+  {
+    setDy_Form([...Dy_Form ,{fname : '',lname : ''}])
+  }
 
-  
+  function removeElement(index)
+  {
+    let TempArr = [...Dy_Form];
+    TempArr.splice(index,1);
+    setDy_Form(TempArr);
+  }
+
+
+
 
   return (
     <div>
@@ -44,6 +56,7 @@ export default function DynamicForms() {
                 ) : (
                   ''
                 )}
+                
           </div>
         )
       })}
