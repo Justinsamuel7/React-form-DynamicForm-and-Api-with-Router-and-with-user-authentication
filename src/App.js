@@ -6,6 +6,7 @@ import Career from './Career';
 import About from './About';
 import Form from './Form';
 import DynamicForms from "./DynamicForm"
+import ApiCards from "./ApiCards"
 
 let usernamepass_details = [
   {
@@ -59,6 +60,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Form" element={<Form />} />
           <Route path="/DynamicForms" element={<DynamicForms />} />
+          <Route path="/ApiPage" element={<ApiCards />} />
           <Route path="/Career" element={<Career />} />
           <Route path="/About" element={<About />} />
           <Route path="/Sign in" element={<App />} />
