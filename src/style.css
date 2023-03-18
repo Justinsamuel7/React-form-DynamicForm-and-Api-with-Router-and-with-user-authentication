@@ -115,3 +115,43 @@ button {
   background-color: rgb(206, 40, 40);
   border: 2px solid rgb(146, 0, 0);
 }
+
+
+
+
+#Addresscardcontainer,#cardscont
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card
+{
+  width: 20rem;
+  height: max-content;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  margin: 1rem;
+}
+.Addresscard
+{
+  width: 20rem;
+  height: max-content;
+  background-color: rgb(255, 189, 189);
+  color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  border: 1px solid rgb(170, 0, 0);
+  padding: 1rem;
+  margin: 1rem;
+}
+.Addresscard button
+{
+  width: 5rem;
+  padding: 0.2rem;
+  background-color: rgb(49, 228, 255);
+  border: 1px solid rgb(0, 162, 186);
+  border-radius: 5px;
+  color: rgb(0, 89, 103);
+}

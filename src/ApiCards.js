@@ -42,26 +42,25 @@ export default function ApiCards() {
         return(
           <div id="cardscont">
           <div key ={index} class="card" onClick={()=>addressfetch(index,ele.address)}>
-            <p>{ele.username}</p>
-            <p>{ele.email}</p>
-            <p>{ele.phone}</p>
+            <p><b>Username : </b>{ele.username}</p>
+            <p><b>Email ID : </b>{ele.email}</p>
+            <p><b>Phone No : </b>{ele.phone}</p>
           </div>
           </div>
         )
       })}
       </> : ''}
 
-      {Layout.address? <>
-      <div>
-        <p>Address</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+      {Layout.address? <div id="Addresscardcontainer">
+      <div class="Addresscard">
+        <h4>Address</h4>
+        <p>{Address.suite},</p>
+        <p>{Address.street},</p>
+        <p>{Address.city},</p>
+        <p>{Address.zipcode}.</p>
         <button onClick={ApiRequest}>Back</button>
-
       </div>
-      </> : ''}
+      </div> : ''}
     </div>
   );
 }
