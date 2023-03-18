@@ -16,13 +16,16 @@ export default function ApiCards() {
     let Initialreq = await fetch("https://jsonplaceholder.typicode.com/users");
     let Finalreq = await Initialreq.json();
     setCard(Finalreq);
+    setLayout({card:true , address:false});
+
   }
 
-  async function addressfetch(id)
+  async function addressfetch(index,address)
   {
     let Initialreq = await fetch("https://jsonplaceholder.typicode.com/users");
     let Finalreq = await Initialreq.json();
-    setCard(Finalreq);
+    setAddress(Finalreq[index].address);
+    setLayout({card:false , address:true});
   }
 
 
@@ -38,7 +41,7 @@ export default function ApiCards() {
       {Card.map((ele,index)=>{
         return(
           <div id="cardscont">
-          <div key ={index} class="card" onClick={()=>addressfetch(ele.id)}>
+          <div key ={index} class="card" onClick={()=>addressfetch(index,ele.address)}>
             <p>{ele.username}</p>
             <p>{ele.email}</p>
             <p>{ele.phone}</p>
@@ -46,6 +49,18 @@ export default function ApiCards() {
           </div>
         )
       })}
+      </> : ''}
+
+      {Layout.address? <>
+      <div>
+        <p>Address</p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <button onClick={ApiRequest}>Back</button>
+
+      </div>
       </> : ''}
     </div>
   );
