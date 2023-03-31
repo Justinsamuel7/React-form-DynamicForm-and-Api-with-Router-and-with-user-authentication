@@ -92,7 +92,7 @@ export default function Form() {
       </form>
       <br/>
       <br/>
-      {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data,)=>{
+      {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data,index)=>{
         return(
           <ul key={data.uniqueKey} class="userdetailscard">
           <li><b>Name :</b>  {data.name}</li>
