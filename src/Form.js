@@ -21,6 +21,7 @@ export default function Form() {
   function CollectInputs(e)
   {
     // console.log(e.target.value)
+    console.log(e)
     let key=e.target.name
     setFormTemplate({...FormTemplate,[key]:e.target.value})
   }
@@ -30,14 +31,14 @@ export default function Form() {
     e.preventDefault();
     setDetailsArr([...DetailsArr , {...FormTemplate , uniqueKey: new Date().getMilliseconds()}])
     // ErrorCheck()
-    setFormTemplate(({
+    setFormTemplate({
       name: '',
       age: '',
       gender: '',
       phnumber: '',
       mail: '',
       dept: ''
-    }))
+    })
 
   }
 
@@ -91,7 +92,7 @@ export default function Form() {
       </form>
       <br/>
       <br/>
-      {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data)=>{
+      {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data,)=>{
         return(
           <ul key={data.uniqueKey} class="userdetailscard">
           <li><b>Name :</b>  {data.name}</li>
