@@ -88,7 +88,7 @@ export default function Form() {
       <br/>
       <br/>
       <button type="submit">Submit</button>
-
+      </form>
       <br/>
       <br/>
       {ErrorOccured ? (<>error</>): (<>{DetailsArr.map((data)=>{
@@ -109,7 +109,6 @@ export default function Form() {
 
 
 
-      </form>
 
     </div>
   );
